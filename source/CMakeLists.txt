@@ -7,6 +7,15 @@ add_executable(example
 add_executable (aufgabe2bis4
   aufgabe2bis4.cpp
 )
+add_executable (aufgabe6
+  aufgabe6.cpp
+)
+add_executable (aufgabe9
+  aufgabe9.cpp
+)
+add_executable (aufgabe10
+  aufgabe10.cpp
+)
 add_executable (Circle
   Circle.cpp
 )
