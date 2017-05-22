@@ -11,6 +11,7 @@ class Circle
       public:
              Circle(); 
              Circle(double r); 
+             Circle(double r, double s); 
              //Circle(Color const& rgb);
              ~Circle();
              void setradius(double r); 
@@ -19,38 +20,37 @@ class Circle
              double circumference();       //Konstruktor Umfang
              double diameter();     //Konstruktor Durchmesser
              //Color const& color() const { return rgb_; } ;
-             bool operator == (Circle a);
-             bool operator < (Circle a);
-             bool operator > (Circle a);
+             friend bool operator == (const Circle&, const Circle&);
+             friend bool operator < (const Circle&, const Circle&);
+             friend bool operator > (const Circle&, const Circle&);
             
 };
 
-bool Circle::operator == (Circle a) 
-{
-    if(radius == a.radius){
+bool operator == (const Circle& x, const Circle& y) 
+{   
+    if (x.radius == y.radius){
         return true;
-        }
-    else{
+    }
+    else {
         return false;
-    }  
+    };
 }
-bool Circle::operator < (Circle a) 
+bool operator < (const Circle& x, const Circle& y) 
 {
-    if(radius < a.radius){
-        return true;
-        }
-    else{
+    if (x.radius < y.radius){
+        return true;  
+    }
+    else {
         return false;
-    }  
+    } ;
 }
-bool Circle::operator > (Circle a) 
+bool operator > (const Circle& x, const Circle& y) 
 {
-    if(radius > a.radius){
-        return true;
-        }
-    else{
+    if (x.radius > y.radius){
+    return true;
+    }
+    else {
         return false;
-    }     
-        ;
+    } ;
 }
 # endif // VEC2_HPP

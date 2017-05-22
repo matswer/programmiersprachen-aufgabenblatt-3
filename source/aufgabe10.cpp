@@ -10,8 +10,9 @@ bool prime1;
 bool is_prime(int); 
 
 template<typename T>
-    int filter (int v)
+    int filter (int v, bool is_prime())
     {
+        for ()
         return v.erase(std::remove_if(v.begin(), v.end(), is_prime()), v.end());
     }    
 
