@@ -44,18 +44,15 @@ int main ()
 
 // Aufgabe 3.4
     
-    /*std:: map <std::list, unsigned int> anzahl;
+    std :: list <unsigned int> anz (100);
 
-    for (int i=0; i<100; ++i){  //Iteration
-    
-    unsigned int j =0;
-
-    
-    }
-      
-    };
-    std :: copy (std :: begin (anzahl), std :: end(anzahl),
-            std :: ostream_iterator<int>( std :: cout , "\n"));*/
+        for (auto & a : anz){
+                for (int i=0; i<100; ++i){
+                a = std::count(l1.begin(), l1.end(), i);
+            }
+        };
+    std :: copy (std :: begin (anz), std :: end(anz),
+            std :: ostream_iterator<int>( std :: cout , "\n"));
 
     return 0;
     };
